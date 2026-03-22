@@ -18,15 +18,22 @@ export default function Portfolio() {
     { id: 3, title: "BVCOVIA - La nesfarsit", category: "Remake", src: "/cosmin3.jpg" },
   ];
 
-  // Variante pentru animatii in cascada
+  // Variante pentru animatii in cascada - Fixate pentru TypeScript
   const containerFade = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.1 } }
+    visible: { 
+      opacity: 1, 
+      transition: { staggerChildren: 0.2, delayChildren: 0.1 } 
+    }
   };
 
   const itemFade = {
     hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.8, ease: "easeOut" } 
+    }
   };
 
   return (
