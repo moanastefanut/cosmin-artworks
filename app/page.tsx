@@ -11,7 +11,6 @@ export default function Portfolio() {
   const { scrollYProgress } = useScroll();
   const scaleX = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
-  // Updated artworks with correct image sources
   const artworks = [
     { id: 1, title: "Etape", category: "Etape", src: "/cosmin1.jpg"},
     { id: 2, title: "Al 12-lea Motiv", category: "Al 12-lea Motiv", src: "/cosmin2.jpg" },
@@ -127,7 +126,7 @@ export default function Portfolio() {
                   fill
                   className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-in-out"
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  priority={art.id === 1} // incarca prima poza cu prioritate
+                  priority={art.id === 1} 
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-br from-[#0a84ff]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10" />
